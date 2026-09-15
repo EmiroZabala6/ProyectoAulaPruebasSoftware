@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Iniciar Sesion - House Pay Assistant</title>
+  <title>Crear Cuenta - House Pay Assistant</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
@@ -12,7 +12,6 @@
 
   <div class="pantalla-acceso">
 
-    <!-- Lado izquierdo, solo decorativo, se ve en pantallas grandes -->
     <div class="panel-visual degradado-encabezado">
       <div class="marca">
         <div class="icono-redondo"><i class="fa-solid fa-house-chimney-user"></i></div>
@@ -49,44 +48,49 @@
       </div>
     </div>
 
-    <!-- Lado derecho, formulario -->
     <div class="panel-formulario">
       <div class="caja-formulario">
 
         <div class="selector-pestanas">
-          <a href="index.html" class="pestana pestana-activa" style="display:block;">Iniciar Sesion</a>
-          <a href="registro.html" class="pestana" style="display:block;">Crear Cuenta</a>
+          <a href="index.html" class="pestana" style="display:block;">Iniciar Sesion</a>
+          <a href="registro.html" class="pestana pestana-activa" style="display:block;">Crear Cuenta</a>
         </div>
 
-        <h2 style="font-size:24px; font-weight:800; margin-bottom:4px;">¡Bienvenido de nuevo!</h2>
-        <p class="texto-pequeno mb-24">Ingresa las credenciales del hogar para acceder a tu panel.</p>
+        <h2 style="font-size:24px; font-weight:800; margin-bottom:4px;">Registra tu Hogar</h2>
+        <p class="texto-pequeno mb-24">Empieza a organizar las cuentas y gastos en menos de 2 minutos.</p>
 
         <form action="dashboard.html" method="get">
           <div class="campo">
-            <label for="correo">Correo electronico o usuario</label>
-            <input type="text" id="correo" value="familia.morales@housepay.co">
+            <label for="nombre">Nombre completo</label>
+            <input type="text" id="nombre" placeholder="Ej. Camila Morales">
           </div>
 
           <div class="campo">
-            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
-              <label style="margin-bottom:0;" for="clave">Contrasena</label>
-              <a href="mailto:soporte@housepay.co" style="font-size:12px; color:var(--azul-600); font-weight:700;">¿Olvidaste tu contrasena?</a>
-            </div>
-            <input type="password" id="clave" value="12345678">
+            <label for="correo2">Correo electronico</label>
+            <input type="email" id="correo2" placeholder="nombre@hogar.com">
           </div>
 
-          <button type="submit" class="boton boton-primario" style="width:100%; margin-top:8px;">
-            <span>Iniciar Sesion en el Hogar</span>
+          <div class="formulario campo-doble mb-16">
+            <div class="campo" style="margin-bottom:0;">
+              <label for="clave1">Contrasena</label>
+              <input type="password" id="clave1" placeholder="Minimo 8 caracteres">
+            </div>
+            <div class="campo" style="margin-bottom:0;">
+              <label for="clave2">Confirmar</label>
+              <input type="password" id="clave2" placeholder="Repite contrasena">
+            </div>
+          </div>
+
+          <div style="display:flex; align-items:center; gap:8px; margin-bottom:20px;">
+            <input type="checkbox" id="terminos" checked>
+            <label for="terminos" style="font-size:12px; color:var(--gris-600);">Acepto administrar los presupuestos con respeto familiar.</label>
+          </div>
+
+          <button type="submit" class="boton boton-primario" style="width:100%;">
+            <span>Crear Cuenta y Abrir Panel</span>
             <i class="fa-solid fa-arrow-right"></i>
           </button>
         </form>
-
-        <div class="enlace-separador"><span>o acceso rapido de demostracion</span></div>
-
-        <a href="dashboard.html" class="boton boton-secundario" style="width:100%;">
-          <i class="fa-solid fa-wand-magic-sparkles" style="color:var(--azul-500);"></i>
-          <span>Entrar como Demo: Hogar Familia Morales</span>
-        </a>
 
       </div>
     </div>
